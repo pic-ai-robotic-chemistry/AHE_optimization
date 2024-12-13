@@ -1,4 +1,4 @@
-# High-entropy-alloy electocatalysts optimization
+# High-entropy electocatalysts optimization
 
 This project focuses on optimizing the components of high-entropy electrocatalysts through a combination of literature data mining and neural network modeling. It is divided into two main components: Literature Data Mining and Neural Network Modeling.
 
@@ -18,9 +18,6 @@ pip install -r ./data_mining/requirements.txt
 #### 1.2.1 Abstract
 
 Chemical entities and their functions can be extracted from the abstract. The abstracts can be downloaded via webofscience.
-
-The abstract exported from webofscience should be in the **tab delimited format(1)** and contain **abstract(2)** as shown in follow:
-![wos.png](wos.png)
 
 The abstract exported from webofscience should be preprocessed by the following command:
 ```bash
@@ -79,7 +76,7 @@ python ./data_mining/data_extractor/nlp_parser.py
 python ./data_mining/data_extractor/tag_token_extractor.py
 
 # Extract Chemical Entities with Specific Function
-python /data_mining./data_extractor/mol_extractor.py
+python ./data_mining/data_extractor/mol_extractor.py
 ```
 
 ### 1.5 Analysis and Draw
@@ -87,3 +84,38 @@ python /data_mining./data_extractor/mol_extractor.py
 ```bash
 # Alloy
 python ./data_mining/data_draw/alloy_draw.py
+```
+
+## 2. Neural Network Modeling
+
+### 2.1 Requirements
+
+```bash
+pip install -r ./neural_network/requirements.txt
+```
+
+### 2.2  Training the model
+
+The metal-ratio NN model is employed to predict the reactant-metal-salt ratios by entering the AHE metal compositions.
+
+The metal-ratio NN model should be trained by the following command:
+
+```bash
+python ./neural_network/train_metal_ratio.py
+```
+
+The theoretical NN model uses different compositions as effective OER descriptors to predict three key factors (Δ*G*<sub>OH</sub>, Δ*G*<sub>O-OH</sub>, and Δ*q*).
+
+The theoretical NN model should be trained by the following command:
+
+```bash
+python ./neural_network/train_theoretical.py
+```
+
+The calibrated NN model is employed to obtain the relationships between different compositions and real overpotentials.
+
+The calibrated NN model should be trained by the following command:
+
+```bash
+python ./neural_network/train_calibrated.py
+```

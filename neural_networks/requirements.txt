@@ -1,0 +1,6 @@
+joblib
+numpy==1.26.0
+openpyxl
+pandas
+scikit_learn==1.0.2
+tensorflow==2.10.0

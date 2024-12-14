@@ -1,6 +1,6 @@
-# High-entropy electocatalysts optimization
+# Amorphous High-Entropy Electrocatalyst Optimization
 
-This project focuses on optimizing the components of high-entropy electrocatalysts through a combination of literature data mining and neural network modeling. It is divided into two main components: Literature Data Mining and Neural Network Modeling.
+This project focuses on optimizing the compositions of amorphous high-entropy electrocatalysts through a combination of literature data mining and neural network models. It is divided into two main components: Literature Data Mining and Neural Network Models. 
 
 ## 1. Literature Data Mining
 
@@ -86,7 +86,7 @@ python ./data_mining/data_extractor/mol_extractor.py
 python ./data_mining/data_draw/alloy_draw.py
 ```
 
-## 2. Neural Network Modeling
+## 2. Neural Network Models
 
 ### 2.1 Requirements
 
@@ -94,7 +94,7 @@ python ./data_mining/data_draw/alloy_draw.py
 pip install -r ./neural_network/requirements.txt
 ```
 
-### 2.2  Training the model
+### 2.2  Training models
 
 The metal-ratio NN model is employed to predict the reactant-metal-salt ratios by entering the AHE metal compositions.
 

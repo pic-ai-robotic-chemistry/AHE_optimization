@@ -3,6 +3,8 @@
 :File: train_calibrated.py
 :Author: zhoudl@mail.ustc.edu.cn
 """
+import os
+import sys
 import time
 
 import joblib
@@ -10,6 +12,8 @@ import pandas as pd
 import tensorflow as tf
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
+
+os.chdir(os.path.dirname(sys.argv[0]))
 
 data = 'data_calibrated.xlsx'
 x = pd.read_excel(data, sheet_name='metals')

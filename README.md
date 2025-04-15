@@ -91,7 +91,7 @@ python ./data_mining/data_draw/alloy_draw.py
 ### 2.1 Requirements
 
 ```bash
-pip install -r ./neural_network/requirements.txt
+pip install -r ./neural_networks/requirements.txt
 ```
 
 ### 2.2  Training models
@@ -101,7 +101,7 @@ The metal-ratio NN model is employed to predict the reactant-metal-salt ratios b
 The metal-ratio NN model should be trained by the following command:
 
 ```bash
-python ./neural_network/train_metal_ratio.py
+python ./neural_networks/train_metal_ratio.py
 ```
 
 The theoretical NN model uses different compositions as effective OER descriptors to predict three key factors (Δ*G*<sub>OH</sub>, Δ*G*<sub>O-OH</sub>, and Δ*q*).
@@ -109,7 +109,7 @@ The theoretical NN model uses different compositions as effective OER descriptor
 The theoretical NN model should be trained by the following command:
 
 ```bash
-python ./neural_network/train_theoretical.py
+python ./neural_networks/train_theoretical.py
 ```
 
 The calibrated NN model is employed to obtain the relationships between different compositions and real overpotentials.
@@ -117,5 +117,5 @@ The calibrated NN model is employed to obtain the relationships between differen
 The calibrated NN model should be trained by the following command:
 
 ```bash
-python ./neural_network/train_calibrated.py
+python ./neural_networks/train_calibrated.py
 ```

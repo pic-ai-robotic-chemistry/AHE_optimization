@@ -94,7 +94,21 @@ python ./data_mining/data_draw/alloy_draw.py
 pip install -r ./neural_networks/requirements.txt
 ```
 
-### 2.2  Training models
+### 2.2 Data Specifications
+
+- **./neural_networks/data_simulated_systems.xlsx**:
+Contains numerical data on metal and hydroxide ion distributions for classical molecular dynamics (CMD) simulations.
+
+- **./neural_networks/data_theoretical.xlsx**:
+Documents six-metal compositional ratios from CMD simulations of amorphous configurations, along with three key factors from combined CMD simulations and density functional theory (DFT) calculations: Gibbs free energy changes of intermediate absorption (Δ*G*<sub>OH</sub>, Δ*G*<sub>O-OH</sub>) and charge transfer (Δ*q*).
+
+- **./neural_networks/data_metal_ratio.xlsx**:
+Records final compositions and reactant feeding ratios of amorphous high-entropy electrocatalysts (AHEs).
+
+- **./neural_networks/data_calibrated.xlsx**:
+Stores final compositions of AHEs and experimental oxygen evolution reaction (OER) overpotentials at 10 mA cm<sup>-2</sup>.
+
+### 2.3  Training Models
 
 The metal-ratio NN model is employed to predict the reactant-metal-salt ratios by entering the AHE metal compositions.
 
